@@ -1,0 +1,1 @@
+export const getGameConfiguration = (state) => state.gameConfiguration;
