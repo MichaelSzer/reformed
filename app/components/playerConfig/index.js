@@ -25,28 +25,40 @@ class PlayerConfig extends PureComponent {
 
     render(){
 
-        const { userTitle } = this.props;
+        const { title } = this.props;
+        const { username, character } = this.state;
 
         return(
             <View style={styles.viewMain}>
                 <Text style={styles.textUserNumber}>
-                    {`${userTitle}`}
+                    {`${title}`}
                 </Text>
                 <View style={{ height: 16 }} />
                 <TextInput 
                     onChangeText={this.handleOnChangeTextUsername}
                     style={styles.inputText}
                     placeholder={'Username'}
+                    value={username}
                 />
                 <View style={{ height: 6 }} />
                 <TextInput 
                     onChangeText={this.handleOnChangeTextCharacter}
                     style={styles.inputText}
                     placeholder={'Character'}
+                    value={character}
                 />
                 <View style={{ height: 10 }} />
             </View>
         );
+    }
+
+    static getDerivedStateFromProps(props, state){
+        const { user } = props;
+
+        return {
+            username: user.username,
+            character: user.character
+        }
     }
 }
 

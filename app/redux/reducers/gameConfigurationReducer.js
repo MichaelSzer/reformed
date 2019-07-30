@@ -1,6 +1,7 @@
 import * as configureGameActionTypes from '../actionTypes/configureGameActionTypes';
 
 const gameConfigurationReducer = (state = { status: 'NONE', error: '' }, action) => {
+    
     switch(action.type){
 
         case configureGameActionTypes.FETCHING_SERVER:

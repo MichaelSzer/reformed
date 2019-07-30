@@ -1,0 +1,1 @@
+export const getPoints = (state) => state.points;

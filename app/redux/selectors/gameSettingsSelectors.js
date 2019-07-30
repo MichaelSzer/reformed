@@ -1,0 +1,1 @@
+export const getGameSettings = (state) => state.gameSettings;
