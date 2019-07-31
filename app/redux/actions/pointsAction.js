@@ -31,6 +31,6 @@ export const requestAddPoint = (username) => (dispatch, getState) => {
     axios(httpConfig).then( res => {
         dispatch(addPoint(username));
     }).catch( err => {
-        console.log(err.response.data);
+        console.log(err);
     });
 }

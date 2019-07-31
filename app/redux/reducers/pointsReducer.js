@@ -15,7 +15,7 @@ const pointsReducer = (state = {}, action) => {
             const username = action.payload.username;
             return {
                 ...state,
-                [username]: state.users[username] + 1
+                [username]: state[username] + 1
             }
 
         default:

@@ -12,7 +12,6 @@ class GameMainScreen extends PureComponent {
     generatePlayerButtons = () => {
 
         const { users } = this.props.gameSettings;
-        console.log(users);
         const userComponents = [];
         for(let i = 0; i < Object.keys(users).length; i++){
             const user = users[Object.keys(users)[i]];
